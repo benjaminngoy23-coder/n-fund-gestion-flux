@@ -1,0 +1,23 @@
+FUNDFLOW - CONFIGURATION DOKPLOY OBLIGATOIRE
+
+1. Dans Dokploy, ouvrir l'application FundFlow.
+2. Aller dans General / Build Type.
+3. Choisir : Dockerfile (et non Nixpacks).
+4. Dockerfile Path : Dockerfile
+5. Docker Context Path : .
+6. Docker Build Stage : laisser vide.
+7. Build Path / Root Directory : / ou vide si le Dockerfile est à la racine.
+8. Enregistrer avec Save.
+9. Variables d'environnement :
+   PORT=8000
+   DATA_DIR=/app/data
+10. Domaine : Container Port = 8000
+11. Relancer avec Deploy / Redeploy.
+
+Le dépôt GitHub doit montrer directement à sa racine :
+- app.py
+- Dockerfile
+- .dockerignore
+- .gitignore
+
+Ne pas déposer le fichier ZIP lui-même dans GitHub : le décompresser puis téléverser son contenu.
